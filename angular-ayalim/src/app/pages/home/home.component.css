@@ -1,0 +1,15 @@
+.event-cards {
+    border-radius: 20px;
+    border: 2px solid black;
+    width: max-content;
+    gap: 20px;
+    background-color: blueviolet;
+    padding: 20px 30px;
+}
+.goto-addEvent {
+    height: 50px;
+    width: 150px;
+    background-color: lightgreen;
+    border-style: none;
+    margin: 20px;
+}

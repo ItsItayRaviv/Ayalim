@@ -1,0 +1,7 @@
+
+<div class="card">
+    <h1>{{eventInfo.name}}</h1>
+    <h2>{{eventInfo.location}}</h2>
+    <p>date of event: {{eventInfo.date}} at hour: {{eventInfo.time}}</p>
+    <a [routerLink]="['/Event', eventInfo.id]">for more Details</a>
+</div>

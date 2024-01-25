@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "Event 1",
+        "location": "Location 1",
+        "photo": "Photo URL 1",
+        "date": "2024-01-21",
+        "time": "10:30"
+    },
+    {
+        "id": 2,
+        "name": "Event 2",
+        "location": "Location 2",
+        "photo": "Photo URL 2",
+        "date": "2024-01-22",
+        "time": "22:00"
+    },
+    {
+        "id": 3,
+        "name": "Event 3",
+        "location": "Location 3",
+        "photo": "Photo URL 3",
+        "date": "2024-01-23",
+        "time": "18:45"
+    }
+]
