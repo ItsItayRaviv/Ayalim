@@ -3,14 +3,13 @@ import { CommonModule } from '@angular/common';
 import { EventInfo } from '../../interfaces/event-info';
 import { EventService } from '../../services/event/event.service';
 import { EventCardComponent } from '../../reusables/event-card/event-card.component';
-import { RouterModule } from '@angular/router';
-import { AppModule } from '../../app.module';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [ CommonModule, EventCardComponent, RouterModule, AppModule ],
+  imports: [ CommonModule, EventCardComponent, HttpClientModule ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })

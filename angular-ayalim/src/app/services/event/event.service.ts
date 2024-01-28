@@ -4,7 +4,7 @@ import { EventInfo } from '../../interfaces/event-info';
 import { Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 
 export class EventService {
@@ -38,7 +38,6 @@ export class EventService {
 ];
   constructor(private http: HttpClient) { 
   }
-
   getEvents(): Observable<EventInfo[]> {
     console.log('get events activated');
     return this.http.get<EventInfo[]>(this.apiUrl);
