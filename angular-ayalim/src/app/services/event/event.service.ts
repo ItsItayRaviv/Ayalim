@@ -38,8 +38,9 @@ export class EventService {
 ];
   constructor(private http: HttpClient) { 
   }
+  
   getEvents(): Observable<EventInfo[]> {
-    console.log('get events activated');
+    console.log('get events used');
     return this.http.get<EventInfo[]>(this.apiUrl);
   }
 

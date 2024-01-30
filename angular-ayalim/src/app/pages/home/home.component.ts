@@ -4,6 +4,7 @@ import { EventInfo } from '../../interfaces/event-info';
 import { EventService } from '../../services/event/event.service';
 import { EventCardComponent } from '../../reusables/event-card/event-card.component';
 import { HttpClientModule } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 
 @Component({
@@ -15,8 +16,10 @@ import { HttpClientModule } from '@angular/common/http';
 })
 export class HomeComponent {
   eventInfoList: EventInfo[] = [];
+  ObsEventInfoList: Observable<EventInfo[]>;
 
   constructor(private eventService: EventService) {
     this.eventInfoList = this.eventService.getAllEventinfos();
+    this.ObsEventInfoList = this.eventService.getEvents();
   }
 }

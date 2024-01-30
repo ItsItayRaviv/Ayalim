@@ -4,7 +4,9 @@
     <app-event-card *ngFor="let eventInfo of eventInfoList"
         [eventInfo]="eventInfo"></app-event-card>
 </div>
-<!-- <div class="event-cards2">    
-    <app-event-card *ngFor="let event of eventss"
+
+<div class="event-cards2">    
+    <h1>this is retrieved using the service from the api</h1>
+    <app-event-card *ngFor="let event of ObsEventInfoList | async"
         [eventInfo]="event"></app-event-card>
-</div> -->
+</div>
