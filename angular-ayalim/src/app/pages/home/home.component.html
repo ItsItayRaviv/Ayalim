@@ -10,3 +10,12 @@
     <app-event-card *ngFor="let event of ObsEventInfoList | async"
         [eventInfo]="event"></app-event-card>
 </div>
+
+<div class="event-cards3">    
+    <h1>
+        this is retrieved using the service from the api from mongoDB
+        
+    </h1>
+    <p *ngFor="let occasion of dbOccasionInfo | async">{{occasion.id}}</p>
+    
+</div>

@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 
 export class EventService {
-  private apiUrl = "http://localhost:3000/api/events";
+  private apiUrl = "http://localhost:3000/";
   protected lastID = 3;
   protected eventInfoList: EventInfo[] = [
     {
@@ -41,7 +41,12 @@ export class EventService {
   
   getEvents(): Observable<EventInfo[]> {
     console.log('get events used');
-    return this.http.get<EventInfo[]>(this.apiUrl);
+    return this.http.get<EventInfo[]>(this.apiUrl + 'api/events');
+  }
+
+  getOccasions(): Observable<EventInfo[]> {
+    console.log('getOccasions used');
+    return this.http.get<EventInfo[]>(this.apiUrl + 'occasions')
   }
 
 

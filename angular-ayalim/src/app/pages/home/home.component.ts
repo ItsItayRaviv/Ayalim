@@ -17,9 +17,11 @@ import { Observable } from 'rxjs';
 export class HomeComponent {
   eventInfoList: EventInfo[] = [];
   ObsEventInfoList: Observable<EventInfo[]>;
+  dbOccasionInfo: Observable<EventInfo[]>;
 
   constructor(private eventService: EventService) {
     this.eventInfoList = this.eventService.getAllEventinfos();
     this.ObsEventInfoList = this.eventService.getEvents();
+    this.dbOccasionInfo = this.eventService.getOccasions();
   }
 }
