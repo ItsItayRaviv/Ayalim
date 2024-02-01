@@ -1,7 +1,14 @@
 
 <div class="card">
-    <h1>{{eventInfo.name}}</h1>
-    <h2>{{eventInfo.location}}</h2>
-    <p>date of event: {{eventInfo.date}} at hour: {{eventInfo.time}}</p>
-    <a [routerLink]="['/Event', eventInfo.id]">for more Details</a>
+    <img class="card__img" src="../../../assets/image 7 (2).png" [alt]="eventInfo.name + ' image'">
+    <div class="card__heading">
+        <h1>{{eventInfo.hour}}
+            <br>
+            {{eventInfo.name}}
+        </h1>
+    </div>
+    <div class="card__spacer"></div>
+    <div class="card__more-info" [routerLink]="['/Event', eventInfo.id]">
+        <p>{{eventInfo.date}} {{eventInfo.location}}</p>
+    </div>
 </div>

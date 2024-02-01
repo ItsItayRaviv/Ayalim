@@ -1,1 +1,48 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+:root {
+    --clr-background: #FFF5DC;
+    --clr-contrast: #253945;
+    --clr-main: #FA9D00;
+    --clr-main-dark: #B4410F;
+    --clr-bright: #fff;
+    --clr-gray: #575757;
+}
+
+
+body {
+    background-color: var(--clr-background);
+    margin: 0;
+    overflow-x: hidden;
+    font-family: 'IBM Plex Sans Hebrew', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1;
+    letter-spacing: -0.05rem;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+  }
+
+image, video, canvas, svg, picture {
+    display: inline;
+    max-width: 100%;
+    user-select: none;
+}
+
+button {
+    display: inline-block;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+

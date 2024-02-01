@@ -1,5 +1,36 @@
 .card {
-    background-color: aquamarine;
-    border-radius: 5px;
-    width: 300px;
+    background-color: var(--clr-bright);
+    border-radius: 15px;
+    padding-bottom: 25px;
+    width: 330px;
+    border: 1px solid var(--clr-contrast);
+    display: grid;
+    justify-items: center;
+    text-align: center;
+    color: var(--clr-contrast);
+    gap: 15px;
+    * {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+.card__img {
+    width: 100%;
+}
+
+.card__heading {
+    width: fit-content;
+}
+
+.card__spacer {
+    width: 56px;
+    height: 2px;
+    background-color: var(--clr-main-dark);
+}
+
+.card__more-info {
+    user-select: none;
+    cursor: pointer;
+    margin: 0 3rem;
 }

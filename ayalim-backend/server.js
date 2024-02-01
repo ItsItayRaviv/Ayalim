@@ -3,7 +3,7 @@ const app = express();
 
 const fs = require('fs');
 
-const { getOccasions } = require('./repositories/occasionRepository')
+const { getOccasions, createOccasion } = require('./repositories/occasionRepository')
 
 const cors = require('cors');
 app.use(cors());
@@ -14,16 +14,15 @@ const port = 3000;
 
 //const test = require('./repositories/test')
 //test.getTest();
+createOccasion('tester2', 'my place', new Date(24, 2, 4, 20, 45), '11:30');
 
 app.get('/occasions', async (req, res) => {
     try {
-        console.log('using get occasions');
         const occasions = await getOccasions();
-        console.log('after get occasions');
         res.json(occasions);
     } catch (error) {
-        res.status(500).send(error);
         console.log(error);
+        res.status(500).send(error);
     }
 });
 

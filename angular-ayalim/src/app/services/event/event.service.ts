@@ -12,40 +12,41 @@ export class EventService {
   protected lastID = 3;
   protected eventInfoList: EventInfo[] = [
     {
-      "id": 1,
+      "id": '1',
       "name": "Event 1",
       "location": "Location 1",
       "photo": "Photo URL 1",
-      "date": "2024-01-21",
-      "time": "10:30"
+      "dateOnly": "2024-01-21",
+      "hour": "10:30",
+      "date": new Date(24, 2, 1, 20, 15)
   },
   {
-      "id": 2,
+      "id": '2',
       "name": "Event 2",
       "location": "Location 2",
       "photo": "Photo URL 2",
-      "date": "2024-01-22",
-      "time": "22:00"
+      "dateOnly": "2024-01-22",
+      "hour": "22:00",
+      "date": new Date(24, 2, 5, 11, 25)
   },
   {
-      "id": 3,
+      "id": '3',
       "name": "Event 3",
       "location": "Location 3",
       "photo": "Photo URL 3",
-      "date": "2024-01-23",
-      "time": "18:45"
+      "dateOnly": "2024-01-23",
+      "hour": "18:45",
+      "date": new Date(24, 2, 8, 15, 35)
   }
 ];
   constructor(private http: HttpClient) { 
   }
   
   getEvents(): Observable<EventInfo[]> {
-    console.log('get events used');
     return this.http.get<EventInfo[]>(this.apiUrl + 'api/events');
   }
 
   getOccasions(): Observable<EventInfo[]> {
-    console.log('getOccasions used');
     return this.http.get<EventInfo[]>(this.apiUrl + 'occasions')
   }
 
@@ -54,20 +55,12 @@ export class EventService {
     return this.eventInfoList;
   }
 
-  getEventInfoById(id: Number): EventInfo | undefined {
-    return this.eventInfoList.find(EventInfo => EventInfo.id === id)
-  }
+  // getEventInfoById(id: Number): EventInfo | undefined {
+  //   return this.eventInfoList.find(EventInfo => EventInfo.id === id)
+  // }
 
-  addEvent(eventName: string, eventLocation: string) {
-    let newEvent: EventInfo = {
-      id: ++this.lastID,
-      name: eventName,
-      location: eventLocation,
-      photo: "no data",
-      date: "no data",
-      time: "no data",
-    };
-    this.eventInfoList.push(newEvent);
-  }
+  // addEvent(eventName: string, eventLocation: string) {
+    
+  // }
 
 }

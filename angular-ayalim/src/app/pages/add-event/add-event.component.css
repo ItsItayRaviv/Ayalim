@@ -3,4 +3,9 @@
     width: 200px;
     background-color: red;
     border: none;
+    margin: 10px 0;
+}
+
+form > * {
+    margin: 10px 0;
 }

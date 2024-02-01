@@ -19,9 +19,9 @@ export class AddEventComponent {
   });
 
   submitAddEvent() {
-    this.eventService.addEvent(
-      this.addEventForm.value.eventName ?? '',
-      this.addEventForm.value.eventLocation ?? ''
-    );
+    // this.eventService.addEvent(
+    //   this.addEventForm.value.eventName ?? '',
+    //   this.addEventForm.value.eventLocation ?? ''
+    // );
   }
 }

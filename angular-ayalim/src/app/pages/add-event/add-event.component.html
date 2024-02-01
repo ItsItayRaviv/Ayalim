@@ -1,10 +1,13 @@
-<p>add-event works!</p>
 <button routerLink="" class="gohome">home</button>
 
 <form [formGroup]="addEventForm" (submit)="submitAddEvent()">
-    <label for="event-name">Event Name</label>
-    <input id="event-name" type="text" formControlName="eventName">
-    <label for="event-location">Event loctation</label>
-    <input id="event-loation" type="text" formControlName="eventLocation">
+    <div class="addOcc__event-name">
+        <label for="event-name">Event Name</label>
+        <input id="event-name" type="text" formControlName="eventName">
+    </div>
+    <div class="addOcc__event-location">
+        <label for="event-location">Event loctation</label>
+        <input id="event-location" type="text" formControlName="eventLocation">
+    </div>
     <button type="submit" class="primary">Add</button>
 </form>
