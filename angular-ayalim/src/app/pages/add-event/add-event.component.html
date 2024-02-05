@@ -1,13 +1,25 @@
 <button routerLink="" class="gohome">home</button>
+<div class="addocc">
+    <input type="checkbox" id="toggle">
+    <label for="toggle">Add Occasion</label>
+    <form [formGroup]="addEventForm" (submit)="submitAddEvent()" class="addocc__form">
+        <div class="addocc__event-name addocc__field">
+            <label for="event-name">Event Name</label>
+            <input id="event-name" type="text" formControlName="eventName">
+        </div>
+        <div class="addocc__event-location addocc__field">
+            <label for="event-location">Event loctation</label>
+            <input id="event-location" type="text" formControlName="eventLocation">
+        </div>
+        <div class="addocc__event-description addocc__field">
+            <label for="event-description">Event description</label>
+            <input id="event-description" type="text" formControlName="eventDescription">
+        </div>
+        <div class="addocc__event-datetime addocc__field">
+            <label for="event-datetime">Event date and time</label>
+            <input id="event-datetime" type="date" formControlName="eventDatetime" [min]="minDate">
+        </div>
+        <button type="submit" class="primary">Add</button>
+    </form>
+</div>
 
-<form [formGroup]="addEventForm" (submit)="submitAddEvent()">
-    <div class="addOcc__event-name">
-        <label for="event-name">Event Name</label>
-        <input id="event-name" type="text" formControlName="eventName">
-    </div>
-    <div class="addOcc__event-location">
-        <label for="event-location">Event loctation</label>
-        <input id="event-location" type="text" formControlName="eventLocation">
-    </div>
-    <button type="submit" class="primary">Add</button>
-</form>

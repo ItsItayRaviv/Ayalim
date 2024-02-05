@@ -22,12 +22,13 @@
 }
 
 .card-container {
+    --occasion-card-witdh: 300px;
     margin: 0 auto;
     padding: 0 0.5rem;
     justify-self: center;
     width: calc(100% - 1rem - 2px);
     display: grid;
-    grid-template-columns: repeat(auto-fit, 350px);
+    grid-template-columns: repeat(auto-fit, --occasion-card-witdh);
     justify-content: center;
     gap: 50px;
 }

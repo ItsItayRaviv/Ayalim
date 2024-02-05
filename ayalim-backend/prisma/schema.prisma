@@ -10,10 +10,10 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model OccasionTest2 {
+model OccasionTest3 {
   id String @id @default(auto()) @map("_id") @db.ObjectId
   name  String
   location  String
-  date  DateTime
-  hour String
+  dateInput  DateTime
+  description String
 }

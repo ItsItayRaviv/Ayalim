@@ -2,25 +2,24 @@
     background-color: var(--clr-bright);
     border-radius: 15px;
     padding-bottom: 25px;
-    width: 330px;
+    width: var(--occasion-card-witdh);
     border: 1px solid var(--clr-contrast);
     display: grid;
     justify-items: center;
     text-align: center;
     color: var(--clr-contrast);
     gap: 15px;
-    * {
-        margin-top: 0;
+    > * {
         margin-bottom: 0;
     }
 }
 
 .card__img {
-    width: 100%;
+    width: 300px;
 }
 
 .card__heading {
-    width: fit-content;
+    margin-top: 15px;
 }
 
 .card__spacer {
@@ -32,5 +31,11 @@
 .card__more-info {
     user-select: none;
     cursor: pointer;
-    margin: 0 3rem;
+    margin: 0 2rem;
+}
+
+.card__more-info p {
+    margin: 0;
+    font-weight: 600;
+    font-size: 18px;
 }
