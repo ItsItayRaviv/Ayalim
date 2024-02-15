@@ -1,0 +1,12 @@
+header {
+    container-type: inline-size;
+    color: var(--clr-contrast);
+    display: grid;
+    background-color: var(--clr-background);
+    margin: 0;
+    box-shadow: 0 0 10px #000;
+    top: 0;
+    position: sticky;
+    width: 100%;
+    justify-items: end;
+}

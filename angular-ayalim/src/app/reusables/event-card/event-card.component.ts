@@ -1,4 +1,4 @@
-import { Component, Input, input } from '@angular/core';
+import { AfterViewInit, Component, Input } from '@angular/core';
 import { EventInfo } from '../../interfaces/event-info';
 import { RouterModule } from '@angular/router';
 
@@ -9,6 +9,13 @@ import { RouterModule } from '@angular/router';
   templateUrl: './event-card.component.html',
   styleUrl: './event-card.component.css'
 })
-export class EventCardComponent {
+export class EventCardComponent implements AfterViewInit {
   @Input() eventInfo!: EventInfo;
+  date: string = "";
+
+  constructor() {
+  }
+
+  ngAfterViewInit(): void {;
+  }
 }

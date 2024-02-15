@@ -1,10 +1,12 @@
 import { Time } from "@angular/common";
 
 export interface EventInfo {
-    id: number,
-    name: string,
-    location: string,
+    id: string,
+    name: string, //required for creation
+    location: string, //required for creation
     photo: string,
-    date: string,
-    time: string,
+    dateInput: string,
+    dateTime: Date, //required for creation
+    formattedDate: string,
+    description: string //required for creation
 }

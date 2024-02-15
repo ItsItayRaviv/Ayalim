@@ -11,12 +11,12 @@ import { EventInfo } from '../../interfaces/event-info';
   styleUrl: './event-details.component.css'
 })
 export class EventDetailsComponent {
-  route: ActivatedRoute = inject(ActivatedRoute);
-  eventService = inject(EventService);
+  // route: ActivatedRoute = inject(ActivatedRoute);
+  // eventService = inject(EventService);
   event: EventInfo | undefined;
   eventId = 0;
-  constructor() {
+  constructor(private occasionService: EventService, private route: ActivatedRoute) {
     this.eventId = Number(this.route.snapshot.params['id']);
-    this.event = this.eventService.getEventInfoById(this.eventId);
+    // this.event = this.eventService.getEvents(this.eventId);
   }
 }

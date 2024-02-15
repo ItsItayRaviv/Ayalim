@@ -1,12 +1,3 @@
-.event-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    border-radius: 20px;
-    border: 2px solid black;
-    gap: 20px;
-    background-color: blueviolet;
-    padding: 20px 20px;
-}
 .goto-addEvent {
     height: 50px;
     width: 150px;
@@ -14,3 +5,36 @@
     border-style: none;
     margin: 20px;
 }
+
+.vibe-img {
+    width: 100%;
+}
+
+.image-container {
+    max-height: 400px;
+    overflow-y: hidden;
+    display: grid;
+    align-content: center;
+    /* top: 0;
+    position: sticky; */
+    z-index: -1;
+    width: 100%;
+}
+
+.card-container {
+    --occasion-card-witdh: 300px;
+    margin: 0 auto;
+    padding: 0 0.5rem;
+    justify-self: center;
+    width: calc(100% - 1rem - 2px);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, --occasion-card-witdh);
+    justify-content: center;
+    gap: 50px;
+}
+
+/* @media (min-width: 450px){
+    .card-container {
+        width: 450px;
+    }
+} */

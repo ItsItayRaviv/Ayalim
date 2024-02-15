@@ -1,5 +1,41 @@
 .card {
-    background-color: aquamarine;
-    border-radius: 5px;
+    background-color: var(--clr-bright);
+    border-radius: 15px;
+    padding-bottom: 25px;
+    width: var(--occasion-card-witdh);
+    border: 1px solid var(--clr-contrast);
+    display: grid;
+    justify-items: center;
+    text-align: center;
+    color: var(--clr-contrast);
+    gap: 15px;
+    > * {
+        margin-bottom: 0;
+    }
+}
+
+.card__img {
     width: 300px;
+}
+
+.card__heading {
+    margin-top: 15px;
+}
+
+.card__spacer {
+    width: 56px;
+    height: 2px;
+    background-color: var(--clr-main-dark);
+}
+
+.card__more-info {
+    user-select: none;
+    cursor: pointer;
+    margin: 0 2rem;
+}
+
+.card__more-info p {
+    margin: 0;
+    font-weight: 600;
+    font-size: 18px;
 }

@@ -1,13 +1,31 @@
 const express = require('express');
-const fs = require('fs');
-const test = require('./repositories/test')
-const cors = require('cors');
 const app = express();
-const port = 3000;
+app.use(express.json());
 
+const fs = require('fs');
+
+const { getOccasions, createOccasion } = require('./repositories/occasionRepository')
+
+const cors = require('cors');
 app.use(cors());
 
-test.getTest();
+
+const port = 3000;
+
+
+//const test = require('./repositories/test')
+//test.getTest();
+//createOccasion('with 4', 'the pub', new Date(2024, 2, 11, 12, 15), 'jut some random textcome lolol');
+
+app.get('/occasions', async (req, res) => {
+    try {
+        const occasions = await getOccasions();
+        res.json(occasions);
+    } catch (error) {
+        console.log(error);
+        res.status(500).send(error);
+    }
+});
 
 app.get('/api/events', (req, res) => {
     fs.readFile('../testing-data.json', 'utf8', (err, data) => {
@@ -17,6 +35,16 @@ app.get('/api/events', (req, res) => {
         }
         res.send(JSON.parse(data));
     });
+});
+
+app.post('/add-occasion', async (req, res) => {
+    console.log('got occation/add');
+    const data = req.body;
+    try {
+        createOccasion(data.name, data.location, new Date(data.dateTime), data.description);
+    } catch (error) {
+        console.log(error);
+    }
 });
 
 app.listen(port, () => {
