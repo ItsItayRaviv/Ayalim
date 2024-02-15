@@ -1,10 +1,11 @@
 .event-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     border-radius: 20px;
     border: 2px solid black;
-    width: max-content;
     gap: 20px;
     background-color: blueviolet;
-    padding: 20px 30px;
+    padding: 20px 20px;
 }
 .goto-addEvent {
     height: 50px;

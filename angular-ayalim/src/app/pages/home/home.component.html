@@ -1,9 +1,9 @@
 <p>home works!</p>
 <button routerLink="AddEvent" class="goto-addEvent">add a new event</button>
-<div class="event-cards">    
+<main class="event-cards">    
     <app-event-card *ngFor="let eventInfo of eventInfoList"
         [eventInfo]="eventInfo"></app-event-card>
-</div>
+</main>
 <!-- <div class="event-cards2">    
     <app-event-card *ngFor="let event of eventss"
         [eventInfo]="event"></app-event-card>
