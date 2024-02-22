@@ -2,8 +2,11 @@ const { PrismaClient } = require('../node_modules/@prisma/client');
 const prisma = new PrismaClient();
 
 async function getOccasions() {
+    console.log('occ rep -> get occasions');
     try {
-        return await prisma.occasionTest3.findMany();
+        console.log('trying to get occasions');
+        return await prisma.occasionTest1502.findMany();
+        console.log('after get occasions');
     } catch (error) {
         console.log('failed to use get occasions ' + error)
     }
@@ -11,7 +14,7 @@ async function getOccasions() {
 
 async function createOccasion(name, location, date, description) {
     try {
-        const newOccasion = await prisma.occasionTest3.create({
+        const newOccasion = await prisma.occasionTest1502.create({
             data: {
                 name: name,
                 location: location,

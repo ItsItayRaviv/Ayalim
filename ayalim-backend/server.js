@@ -19,11 +19,24 @@ const port = 3000;
 
 app.get('/occasions', async (req, res) => {
     try {
+        console.log('server -> get occasions');
         const occasions = await getOccasions();
+        console.log(occasions);
         res.json(occasions);
     } catch (error) {
         console.log(error);
         res.status(500).send(error);
+    }
+});
+
+
+app.post('/add-occasion', async (req, res) => {
+    console.log('got occation/add');
+    const data = req.body;
+    try {
+        createOccasion(data.name, data.location, new Date(data.dateTime), data.description);
+    } catch (error) {
+        console.log(error);
     }
 });
 
@@ -37,16 +50,7 @@ app.get('/api/events', (req, res) => {
     });
 });
 
-app.post('/add-occasion', async (req, res) => {
-    console.log('got occation/add');
-    const data = req.body;
-    try {
-        createOccasion(data.name, data.location, new Date(data.dateTime), data.description);
-    } catch (error) {
-        console.log(error);
-    }
-});
-
 app.listen(port, () => {
+createOccasion('testocc', 'noloc', new Date(), 'nothing to say');
   console.log(`Server running on port ${port}`);
 });
